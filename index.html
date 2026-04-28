@@ -14,29 +14,38 @@
 
     <!-- Header of the Homepage -->
     <section class="background">
-    <h2 class="visually-hidden">Background</h2>
+        <h2 class="visually-hidden">Background</h2>
         <!-- Navigation Bar -->
         <nav class="navBar">
-            <p class="profile">B.H.</p>
+            <a class="profile" href="../index.html">B.H.</a>
             <section class="navLinks">
                 <h2 class="visually-hidden">Navigation</h2>
-                <p class="home">Home</p>
-                <p class="about">About</p>
-                <p class="projects">Projects</p>
-                <p class="resume">Resume</p>
-                <p class="contact">Contact</p>
+                <a class="home" href="../index.html">Home</a>
+                <a class="about" href="../OtherPages/AboutMe.html">About</a>
+
+                <div class="projectsWrapper" id="projectsNav">
+                    <a class="projects">Projects</a>
+
+                    <!-- Projects Overlay -->
+                    <div class="projectsDialog">
+                        <div class="listProjects">
+                            <a class="item" href="../OtherPages/BudgetCalculator.html">Budget Calculator</a>
+                            <a class="item" href="../OtherPages/FresnoChaffeeZooApp.html">Fresno Chaffee Zoo Tracker</a>
+                            <a class="item" href="../OtherPages/TurkeyTrot4k.html">Turkey Trot 4k</a>
+                            <a class="item" href="../OtherPages/EssayResearchPaper.html">Research Paper: “The Importance
+                                of Animal Well-Being”</a>
+                            <a class="item" href="../OtherPages/EssayArgumentative.html">Argument/Synthesis Essay: “Who
+                                holds the power, the platform or the user”</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="resume" href="../OtherPages/Resume.html">Resume</a>
+                <a class="contact" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </nav>
 
-        <dialog class="projectsDialog">
-            <div class="listProjects">
-                <div class="item">Budget Calculator</div>
-                <div class="item">Fresno Chaffee Zoo Tracker</div>
-                <div class="item">Turkey Trot 4k</div>
-                <div class="item">Research Paper: “The Importance of Animal Well-Being”</div>
-                <div class="item">Argument/Synthesis Essay: “Who holds the power, the platform or the user”</div>
-            </div>
-        </dialog>
 
         <!-- Title Header -->
         <header class="titlesHome">
@@ -49,9 +58,9 @@
             <h3>Learn More about me!</h3>
             <section class="learnMoreLinks">
                 <h3 class="visually-hidden">Learn More Links</h3>
-                <p class="projectsLearnMore">Projects</p>
-                <p class="explore">Explore</p>
-                <p class="resumeLearnMore">Resume</p>
+                <a href="#projectsNav" class="projectsLearnMore">Projects</a>
+                <a class="explore" href="../OtherPages/AboutMe.html">Explore</a>
+                <a class="resumeLearnMore" href="../OtherPages/Resume.html">Resume</a>
             </section>
         </section>
 
@@ -64,7 +73,7 @@
             <h2 class="visually-hidden">Projects Section</h2>
 
             <section class="project1">
-                <img src="https://via.placeholder.com/150" alt="Project 1 Image">
+                <img src="/Images/budget-calc-home.png" alt="Project 1 Image">
                 <h3>Budget Calculator</h3>
                 <p>Me and my classmates built a budget calculator that helps students track their expenses, identifying
                     sections where you can reduce spending, and helping you achieve financial goals.</p>
@@ -75,9 +84,9 @@
                 <h2 class="visually-hidden">Project 2</h2>
                 <section class="imagesFresno">
                     <h3 class="visually-hidden">Fresno Images</h3>
-                    <img src="https://via.placeholder.com/150" alt="Project 2 Image">
-                    <img src="https://via.placeholder.com/150" alt="Project 2 Image">
-                    <img src="https://via.placeholder.com/150" alt="Project 2 Image">
+                    <img src="/Images/First-fresno-home.png" alt="Project 2 Image">
+                    <img src="/Images/Second-fresno-home.png" alt="Project 2 Image">
+                    <img src="/Images/Third-fresno-home.png" alt="Project 2 Image">
                 </section>
                 <h3>Fresno Chaffee Zoo, Goal Management Wireframes Tracker</h3>
                 <p>We created a mobile app </p>
@@ -98,7 +107,7 @@
                 JavaScript</p>
         </section>
 
-        <img src="https://via.placeholder.com/150" alt="Project 3 Image">
+        <img src="/Images/Gurney-journey.png" alt="Project 3 Image">
 
     </section>
 
@@ -125,16 +134,16 @@
                 <h3 class="visually-hidden">Footer Menu</h3>
 
                 <div>
-                    <p class="homeFooter">Home</p>
-                    <p class="aboutFooter">About</p>
+                    <a class="homeFooter" href="../index.html">Home</a>
+                    <a class="aboutFooter" href="../OtherPages/AboutMe.html">About</a>
                 </div>
 
                 <div>
-                    <p class="projectsFooter">Projects</p>
-                    <p class="resumeFooter">Resume</p>
+                    <a href="#projectsNav" class="projectsFooter" href="../OtherPages/Projects.html">Projects</a>
+                    <a class="resumeFooter" href="../OtherPages/Resume.html">Resume</a>
                 </div>
 
-                <p class="contactFooter">Contact</p>
+                <a class="contactFooter" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </section>
 

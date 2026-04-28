@@ -1,6 +1,39 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .visually-hidden {
     position: absolute;
     left: -676767px;
+}
+
+.projectsWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.projectsDialog {
+    position: absolute;
+    background: rgb(191, 191, 191);
+    border-radius: 8px;
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+ 
+.projectsWrapper:hover .projectsDialog {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.projectsWrapper.open .projectsDialog {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#projectsNav {
+    scroll-margin-top: 100%; 
 }

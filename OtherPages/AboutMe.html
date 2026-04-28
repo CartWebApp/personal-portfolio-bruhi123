@@ -14,13 +14,32 @@
 
         <!-- Navigation Bar -->
         <nav class="navBar">
-            <p class="profile">B.H.</p>
+            <a class="profile" href="../index.html">B.H.</a>
             <section class="navLinks">
-                <p class="home">Home</p>
-                <p class="about">About</p>
-                <p class="projects">Projects</p>
-                <p class="resume">Resume</p>
-                <p class="contact">Contact</p>
+                <h2 class="visually-hidden">Navigation</h2>
+                <a class="home" href="../index.html">Home</a>
+                <a class="about" href="../OtherPages/AboutMe.html">About</a>
+
+                <div class="projectsWrapper">
+                    <a class="projects">Projects</a>
+
+                    <!-- Projects Overlay -->
+                    <div class="projectsDialog">
+                        <div class="listProjects">
+                            <a class="item" href="../OtherPages/BudgetCalculator.html">Budget Calculator</a>
+                            <a class="item" href="../OtherPages/FresnoChaffeeZooApp.html">Fresno Chaffee Zoo Tracker</a>
+                            <a class="item" href="../OtherPages/TurkeyTrot4k.html">Turkey Trot 4k</a>
+                            <a class="item" href="../OtherPages/EssayResearchPaper.html">Research Paper: “The Importance
+                                of Animal Well-Being”</a>
+                            <a class="item" href="../OtherPages/EssayArgumentative.html">Argument/Synthesis Essay: “Who
+                                holds the power, the platform or the user”</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="resume" href="../OtherPages/Resume.html">Resume</a>
+                <a class="contact" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </nav>
 
@@ -34,7 +53,7 @@
     </section>
 
     <section class="fiveYearPlan">
-        <img src="https://via.placeholder.com/150" alt="Five Year Plan Image">
+        <img src="/Images/time-line.png" alt="Five Year Plan Image">
 
         <section class="fiveYearPlanText">
             <h2>My 5-year Education and Career Plan</h2>
@@ -59,13 +78,13 @@
                 throughout the months it made me realize it was easier than I thought. When I started learning HTML and
                 CSS it seemed basic, until JavaScript was introduced. I started reading a book called “Eloquent
                 JavaScript”, it gave me a better understanding on how JavaScript works, which helped me abundantly.</p>
-            <img src="https://via.placeholder.com/150" alt="Poster CART Image">
+            <img src="/Images/CART-post.png" alt="Poster CART Image">
 
         </section>
 
         <section class="cartJourneyContentDown">
 
-            <img src="https://via.placeholder.com/150" alt="CART Logo Image">
+            <img src="/Images/CART-logo.png" alt="CART Logo Image">
             <p>After developing projects that helped me building my skills on HTML, CSS, and JavaScript, there was
                 moments were bugs were impossible to fix, but with persistence and hard work all paid of. Even if I
                 asked help from peers, it strengthen my skills on problem-solving and confidence. By the end of the
@@ -90,14 +109,14 @@
                     communication through games. Rugby did not just made me an athlete, but it has helped me mentally
                     and
                     physically aspects </p>
-                <img src="https://via.placeholder.com/150" alt="Rugby Image">
+                <img src="/Images/rugby.jpg" alt="Rugby Image">  <!-- Placeholder image because no actual image is available -->
 
                 <section class="chess">
                     <h3>Chess</h3>
                     <p>I've played chess since young. I've also attended to Chess Club and playing tournaments
                         representing my school in Chile. This passion have been growing each year, and I'm very proud to
                         say that I reach 1400 elo in chess.com.</p>
-                    <img src="https://via.placeholder.com/150" alt="Chess Image">
+                    <img src="/Images/chess-rating.png" alt="Chess Image">
                 </section>
             </section>
 
@@ -116,18 +135,19 @@
         <section class="menuFooter">
             <h3>Menu</h3>
             <section class="menuLinks">
+                <h3 class="visually-hidden">Footer Menu</h3>
 
-                <section>
-                    <p class="homeFooter">Home</p>
-                    <p class="aboutFooter">About</p>
-                </section>
+                <div>
+                    <a class="homeFooter" href="../index.html">Home</a>
+                    <a class="aboutFooter" href="../OtherPages/AboutMe.html">About</a>
+                </div>
 
-                <section>
-                    <p class="projectsFooter">Projects</p>
-                    <p class="resumeFooter">Resume</p>
-                </section>
+                <div>
+                    <a href="#projectsNav" class="projectsFooter" href="../OtherPages/Projects.html">Projects</a>
+                    <a class="resumeFooter" href="../OtherPages/Resume.html">Resume</a>
+                </div>
 
-                <p class="contactFooter">Contact</p>
+                <a class="contactFooter" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </section>
 
@@ -135,6 +155,7 @@
             <h3>+1 (559) 273-6997</h3>
             <p>hidalgobruno001@gmail.com</p>
             <section>
+                <h4 class="visually-hidden">Footer Column</h4>
                 <a href="https://www.instagram.com/" target="_blank">Instagram</a>
                 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
             </section>
@@ -142,7 +163,7 @@
 
     </footer>
 
-    <script src="../app.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>

@@ -12,13 +12,32 @@
     <section class="background">
         <h2 class="visually-hidden">Background</h2>
         <nav class="navBar">
-            <p class="profile">B.H.</p>
+            <a class="profile" href="../index.html">B.H.</a>
             <section class="navLinks">
                 <h2 class="visually-hidden">Navigation</h2>
-                <p class="home">Home</p>
-                <p class="about">About</p>
-                <p class="projects">Projects</p>
-                <p class="resume">Resume</p>
+                <a class="home" href="../index.html">Home</a>
+                <a class="about" href="../OtherPages/AboutMe.html">About</a>
+
+                <div class="projectsWrapper">
+                    <a class="projects">Projects</a>
+
+                    <!-- Projects Overlay -->
+                    <div class="projectsDialog">
+                        <div class="listProjects">
+                            <a class="item" href="../OtherPages/BudgetCalculator.html">Budget Calculator</a>
+                            <a class="item" href="../OtherPages/FresnoChaffeeZooApp.html">Fresno Chaffee Zoo Tracker</a>
+                            <a class="item" href="../OtherPages/TurkeyTrot4k.html">Turkey Trot 4k</a>
+                            <a class="item" href="../OtherPages/EssayResearchPaper.html">Research Paper: “The Importance
+                                of Animal Well-Being”</a>
+                            <a class="item" href="../OtherPages/EssayArgumentative.html">Argument/Synthesis Essay: “Who
+                                holds the power, the platform or the user”</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="resume" href="../OtherPages/Resume.html">Resume</a>
+                <a class="contact" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </nav>
     </section>
@@ -36,7 +55,7 @@
                 resources.</li>
             <li>Deployment: Hosted via Netlify to ensure global accessibility and performance.</li>
         </ul>
-        <img src="https://via.placeholder.com/150" alt="Technology Stack Image">
+        <img src="/Images/Budget-calculator-first.png" alt="Technology Stack Image">
     </section>
 
     <section class="conceptLearned-PG">
@@ -51,7 +70,7 @@
             </ul>
         </section>
         <section class="right">
-            <img src="https://via.placeholder.com/150" alt="Concepts Learned Image">
+            <img src="/Images/Budget-calculator.second.png" alt="Concepts Learned Image">
         </section>
     </section>
 
@@ -72,7 +91,8 @@
 
     <section class="habits-mind-PG">
         <section class="left">
-            <img src="https://via.placeholder.com/150" alt="Habits of Mind Image">
+            <img src="/Images/Budget-calculator-third.png" alt="Habits of Mind Image1">
+            <img src="/Images/Budget-calculator-fourth.png" alt="Habits of Mind Image2">
         </section>
         <section class="right">
             <h2>Habits of Mind</h2>
@@ -88,7 +108,7 @@
     <section class="QRCode-PG">
         <h2>QR Code</h2>
         <p>Scan the QR code to access the website:</p>
-        <img src="https://via.placeholder.com/150" alt="QR Code Budget Calculator Image">
+        <img src="/Images/qrcode_bruno-budget-calculator1.netlify.app.png" alt="QR Code Budget Calculator Image">
     </section>
 
     <!-- Footer for all pages -->
@@ -102,18 +122,19 @@
         <section class="menuFooter">
             <h3>Menu</h3>
             <section class="menuLinks">
+                <h3 class="visually-hidden">Footer Menu</h3>
 
-                <section>
-                    <p class="homeFooter">Home</p>
-                    <p class="aboutFooter">About</p>
-                </section>
+                <div>
+                    <a class="homeFooter" href="../index.html">Home</a>
+                    <a class="aboutFooter" href="../OtherPages/AboutMe.html">About</a>
+                </div>
 
-                <section>
-                    <p class="projectsFooter">Projects</p>
-                    <p class="resumeFooter">Resume</p>
-                </section>
+                <div>
+                    <a href="#projectsNav" class="projectsFooter" href="../OtherPages/Projects.html">Projects</a>
+                    <a class="resumeFooter" href="../OtherPages/Resume.html">Resume</a>
+                </div>
 
-                <p class="contactFooter">Contact</p>
+                <a class="contactFooter" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </section>
 
@@ -121,6 +142,7 @@
             <h3>+1 (559) 273-6997</h3>
             <p>hidalgobruno001@gmail.com</p>
             <section>
+                <h4 class="visually-hidden">Footer Column</h4>
                 <a href="https://www.instagram.com/" target="_blank">Instagram</a>
                 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
             </section>
@@ -128,7 +150,7 @@
 
     </footer>
 
-    <script src="../app.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>

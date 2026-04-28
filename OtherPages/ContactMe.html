@@ -14,13 +14,32 @@
 
         <!-- Navigation Bar -->
         <nav class="navBar">
-            <p class="profile">B.H.</p>
+            <a class="profile" href="../index.html">B.H.</a>
             <section class="navLinks">
-                <p class="home">Home</p>
-                <p class="about">About</p>
-                <p class="projects">Projects</p>
-                <p class="resume">Resume</p>
-                <p class="contact">Contact</p>
+                <h2 class="visually-hidden">Navigation</h2>
+                <a class="home" href="../index.html">Home</a>
+                <a class="about" href="../OtherPages/AboutMe.html">About</a>
+
+                <div class="projectsWrapper">
+                    <a class="projects">Projects</a>
+
+                    <!-- Projects Overlay -->
+                    <div class="projectsDialog">
+                        <div class="listProjects">
+                            <a class="item" href="../OtherPages/BudgetCalculator.html">Budget Calculator</a>
+                            <a class="item" href="../OtherPages/FresnoChaffeeZooApp.html">Fresno Chaffee Zoo Tracker</a>
+                            <a class="item" href="../OtherPages/TurkeyTrot4k.html">Turkey Trot 4k</a>
+                            <a class="item" href="../OtherPages/EssayResearchPaper.html">Research Paper: “The Importance
+                                of Animal Well-Being”</a>
+                            <a class="item" href="../OtherPages/EssayArgumentative.html">Argument/Synthesis Essay: “Who
+                                holds the power, the platform or the user”</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="resume" href="../OtherPages/Resume.html">Resume</a>
+                <a class="contact" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </nav>
 
@@ -61,25 +80,25 @@
         <section class="contactDetails">
 
             <section class="contactPhone">
-                <img src="https://via.placeholder.com/150" alt="Phone Icon">
+                <img src="/Images/Phone-blue.png" alt="Phone Icon">
                 <h3>Phone</h3>
                 <p>+1 (559) 273-6997</p>
             </section>
 
             <section class="contactEmail">
-                <img src="https://via.placeholder.com/150" alt="Email Icon">
+                <img src="/Images/Email-blue.png" alt="Email Icon">
                 <h3>Email</h3>
                 <p>hidalgobruno001@gmail.com</p>
             </section>
 
             <section class="contactInstagram">
-                <img src="https://via.placeholder.com/150" alt="Instagram Icon">
+                <img src="/Images/Instagram-blue.png" alt="Instagram Icon">
                 <h3>Instagram</h3>
                 <p><a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
             </section>
 
             <section class="contactLinkedIn">
-                <img src="https://via.placeholder.com/150" alt="LinkedIn Icon">
+                <img src="/Images/LinkedIn-blue.png" alt="LinkedIn Icon">
                 <h3>LinkedIn</h3>
                 <p><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
             </section>
@@ -100,18 +119,19 @@
         <section class="menuFooter">
             <h3>Menu</h3>
             <section class="menuLinks">
+                <h3 class="visually-hidden">Footer Menu</h3>
 
-                <section>
-                    <p class="homeFooter">Home</p>
-                    <p class="aboutFooter">About</p>
-                </section>
+                <div>
+                    <a class="homeFooter" href="../index.html">Home</a>
+                    <a class="aboutFooter" href="../OtherPages/AboutMe.html">About</a>
+                </div>
 
-                <section>
-                    <p class="projectsFooter">Projects</p>
-                    <p class="resumeFooter">Resume</p>
-                </section>
+                <div>
+                    <a href="#projectsNav" class="projectsFooter" href="../OtherPages/Projects.html">Projects</a>
+                    <a class="resumeFooter" href="../OtherPages/Resume.html">Resume</a>
+                </div>
 
-                <p class="contactFooter">Contact</p>
+                <a class="contactFooter" href="../OtherPages/ContactMe.html">Contact</a>
             </section>
         </section>
 
@@ -119,6 +139,7 @@
             <h3>+1 (559) 273-6997</h3>
             <p>hidalgobruno001@gmail.com</p>
             <section>
+                <h4 class="visually-hidden">Footer Column</h4>
                 <a href="https://www.instagram.com/" target="_blank">Instagram</a>
                 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
             </section>
@@ -126,7 +147,7 @@
 
     </footer>
 
-    <script src="../app.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>
