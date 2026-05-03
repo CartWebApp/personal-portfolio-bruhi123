@@ -23,8 +23,9 @@
 
 .projectsDialog {
     position: absolute;
-    background: rgb(191, 191, 191);
-    border-radius: 8px;
+    background: #7A95F6;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     padding: 10px;
     opacity: 0;
     top:19vh;
