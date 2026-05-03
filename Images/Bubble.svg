@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Main bubble fill: glassy blue -->
+    <radialGradient id="bubbleFill" cx="38%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="35%"  stop-color="#b3e5fc" stop-opacity="0.18"/>
+      <stop offset="75%"  stop-color="#1e88e5" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0d47a1" stop-opacity="0.30"/>
+    </radialGradient>
+
+    <!-- Bright inner shine top-left -->
+    <radialGradient id="shineMain" cx="38%" cy="30%" r="30%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.90"/>
+      <stop offset="60%"  stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle bottom reflection -->
+    <radialGradient id="shineBottom" cx="50%" cy="88%" r="28%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Rim glow -->
+    <radialGradient id="rimGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="82%"  stop-color="#64b5f6" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#64b5f6" stop-opacity="0.18"/>
+    </radialGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer soft glow ring -->
+  <circle cx="200" cy="200" r="158" fill="url(#rimGlow)" filter="url(#glow)"/>
+
+  <!-- Main bubble body -->
+  <circle cx="200" cy="200" r="148" fill="url(#bubbleFill)"/>
+
+  <!-- Rim stroke -->
+  <circle cx="200" cy="200" r="148" fill="none" stroke="#90caf9" stroke-width="1.5" stroke-opacity="0.55"/>
+
+  <!-- Top-left shine -->
+  <ellipse cx="155" cy="148" rx="54" ry="36" fill="url(#shineMain)"/>
+
+  <!-- Small bright specular dot -->
+  <ellipse cx="142" cy="138" rx="14" ry="9" fill="#ffffff" fill-opacity="0.75"/>
+
+  <!-- Bottom subtle reflection -->
+  <ellipse cx="200" cy="322" rx="58" ry="18" fill="url(#shineBottom)"/>
+</svg>

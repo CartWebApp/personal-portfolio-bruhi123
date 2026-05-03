@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="droplet" cx="35%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="50%"  stop-color="#90caf9" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1976d2" stop-opacity="0.6"/>
+    </radialGradient>
+    <radialGradient id="droplet2" cx="35%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.80"/>
+      <stop offset="50%"  stop-color="#b3e5fc" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#0288d1" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Burst shards / curved fragments of the bubble skin -->
+  <!-- Each arc piece represents a torn fragment of the bubble wall -->
+
+  <!-- Top fragment curving upward -->
+  <path d="M 185 170 Q 200 120 215 170" fill="none" stroke="#64b5f6" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
+  <path d="M 180 158 Q 200 100 220 158" fill="none" stroke="#90caf9" stroke-width="1.5" stroke-opacity="0.45" stroke-linecap="round"/>
+
+  <!-- Top-right shard -->
+  <path d="M 230 165 Q 275 135 268 178" fill="none" stroke="#64b5f6" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
+
+  <!-- Right shard -->
+  <path d="M 258 195 Q 310 185 295 218" fill="none" stroke="#42a5f5" stroke-width="2.4" stroke-opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Bottom-right shard -->
+  <path d="M 240 235 Q 280 268 255 278" fill="none" stroke="#64b5f6" stroke-width="2.0" stroke-opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Bottom shard -->
+  <path d="M 195 255 Q 200 305 182 295" fill="none" stroke="#90caf9" stroke-width="2.2" stroke-opacity="0.55" stroke-linecap="round"/>
+
+  <!-- Bottom-left shard -->
+  <path d="M 158 238 Q 118 268 128 248" fill="none" stroke="#64b5f6" stroke-width="2.0" stroke-opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Left shard -->
+  <path d="M 140 205 Q 90 200 108 180" fill="none" stroke="#42a5f5" stroke-width="2.3" stroke-opacity="0.62" stroke-linecap="round"/>
+
+  <!-- Top-left shard -->
+  <path d="M 158 168 Q 120 138 145 128" fill="none" stroke="#64b5f6" stroke-width="2.1" stroke-opacity="0.65" stroke-linecap="round"/>
+
+  <!-- Small inner torn pieces near center -->
+  <path d="M 195 190 Q 205 178 215 192" fill="none" stroke="#90caf9" stroke-width="1.8" stroke-opacity="0.5" stroke-linecap="round"/>
+  <path d="M 190 212 Q 200 225 212 210" fill="none" stroke="#81d4fa" stroke-width="1.6" stroke-opacity="0.45" stroke-linecap="round"/>
+
+  <!-- Water droplets spraying outward -->
+  <g filter="url(#soft)">
+    <!-- Top -->
+    <ellipse cx="200" cy="95" rx="5" ry="7" fill="url(#droplet)" opacity="0.85"/>
+    <ellipse cx="190" cy="78" rx="3" ry="4" fill="url(#droplet2)" opacity="0.7"/>
+    <ellipse cx="212" cy="82" rx="2.5" ry="3" fill="url(#droplet)" opacity="0.65"/>
+
+    <!-- Top-right -->
+    <ellipse cx="290" cy="118" rx="5" ry="6" fill="url(#droplet2)" opacity="0.8"/>
+    <ellipse cx="310" cy="105" rx="3" ry="4" fill="url(#droplet)" opacity="0.65"/>
+    <ellipse cx="275" cy="100" rx="2" ry="3" fill="url(#droplet2)" opacity="0.6"/>
+
+    <!-- Right -->
+    <ellipse cx="328" cy="198" rx="6" ry="5" fill="url(#droplet)" opacity="0.8"/>
+    <ellipse cx="348" cy="185" rx="3" ry="3.5" fill="url(#droplet2)" opacity="0.65"/>
+    <ellipse cx="340" cy="212" rx="2.5" ry="2.5" fill="url(#droplet)" opacity="0.6"/>
+
+    <!-- Bottom-right -->
+    <ellipse cx="290" cy="300" rx="5" ry="6" fill="url(#droplet2)" opacity="0.78"/>
+    <ellipse cx="308" cy="318" rx="3" ry="4" fill="url(#droplet)" opacity="0.62"/>
+    <ellipse cx="272" cy="312" rx="2" ry="3" fill="url(#droplet2)" opacity="0.55"/>
+
+    <!-- Bottom -->
+    <ellipse cx="200" cy="330" rx="5" ry="7" fill="url(#droplet)" opacity="0.8"/>
+    <ellipse cx="185" cy="348" rx="3" ry="4" fill="url(#droplet2)" opacity="0.65"/>
+    <ellipse cx="215" cy="344" rx="2.5" ry="3.5" fill="url(#droplet)" opacity="0.6"/>
+
+    <!-- Bottom-left -->
+    <ellipse cx="110" cy="300" rx="5" ry="6" fill="url(#droplet2)" opacity="0.78"/>
+    <ellipse cx="90" cy="316" rx="3" ry="4" fill="url(#droplet)" opacity="0.62"/>
+    <ellipse cx="125" cy="318" rx="2" ry="3" fill="url(#droplet2)" opacity="0.55"/>
+
+    <!-- Left -->
+    <ellipse cx="72" cy="198" rx="6" ry="5" fill="url(#droplet)" opacity="0.8"/>
+    <ellipse cx="52" cy="188" rx="3" ry="3.5" fill="url(#droplet2)" opacity="0.65"/>
+    <ellipse cx="60" cy="212" rx="2.5" ry="2.5" fill="url(#droplet)" opacity="0.6"/>
+
+    <!-- Top-left -->
+    <ellipse cx="110" cy="112" rx="5" ry="6" fill="url(#droplet2)" opacity="0.8"/>
+    <ellipse cx="90" cy="98" rx="3" ry="4" fill="url(#droplet)" opacity="0.65"/>
+    <ellipse cx="128" cy="98" rx="2" ry="3" fill="url(#droplet2)" opacity="0.6"/>
+
+    <!-- Extra scattered tiny droplets -->
+    <circle cx="165" cy="68" r="2" fill="#90caf9" opacity="0.6"/>
+    <circle cx="240" cy="62" r="1.8" fill="#64b5f6" opacity="0.55"/>
+    <circle cx="338" cy="148" r="2" fill="#90caf9" opacity="0.55"/>
+    <circle cx="355" cy="238" r="1.8" fill="#64b5f6" opacity="0.5"/>
+    <circle cx="318" cy="340" r="2" fill="#90caf9" opacity="0.55"/>
+    <circle cx="165" cy="358" r="2" fill="#64b5f6" opacity="0.55"/>
+    <circle cx="58" cy="258" r="1.8" fill="#90caf9" opacity="0.5"/>
+    <circle cx="62" cy="152" r="2" fill="#64b5f6" opacity="0.55"/>
+  </g>
+</svg>
