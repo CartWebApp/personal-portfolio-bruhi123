@@ -28,7 +28,7 @@
     border-bottom-right-radius: 30px;
     padding: 10px;
     opacity: 0;
-    top:19vh;
+    top: 19vh;
     left: 7vw;
     pointer-events: none;
     transition: opacity 0.5s ease;
@@ -45,7 +45,7 @@
         color: white;
         width: 78vw;
         border-bottom: 1px solid white;
-        padding-bottom: 20px ;
+        padding-bottom: 20px;
     }
 }
 
@@ -133,6 +133,7 @@
         font-size: 96px;
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
     }
 
     &>h2 {
@@ -425,7 +426,7 @@
         }
     }
 
-     &>.collaborationFooter {
+    &>.collaborationFooter {
         margin-top: 2vh;
         display: flex;
         flex-direction: column;
@@ -454,7 +455,7 @@
                 }
             }
         }
-     }
+    }
 }
 
 .titlesAbout {
@@ -477,7 +478,7 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 20vh;
-    padding: 50px 0px;
+    padding: 70px 0px;
     background-color: #EFF3FE;
     box-shadow: 0 0px 30px rgba(0, 103, 255, 0.25);
 
@@ -486,12 +487,11 @@
         flex-direction: column;
         align-self: flex-start;
         gap: 40px;
-        width: 40%;
+        width: 30%;
 
         &>h2 {
             font-family: var(--title-font);
             font-size: 36px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         &>p {
@@ -509,6 +509,7 @@
     margin-top: 10vh;
     margin-left: 10vw;
     margin-right: 10vw;
+
     &>h2 {
         font-family: var(--title-font);
         font-size: 36px;
@@ -523,6 +524,7 @@
         margin-top: 10vh;
 
         &>p {
+            font-family: var(--description-font);
             width: 30vw;
             border-left: 1px solid black;
             padding-left: 10px;
@@ -542,6 +544,7 @@
         margin-top: 10vh;
 
         &>p {
+            font-family: var(--description-font);
             width: 30vw;
             border-left: 1px solid black;
             padding-left: 10px;
@@ -550,6 +553,198 @@
         &>img {
             width: 40%;
             height: 40%;
+        }
+    }
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    padding: 70px 0px;
+    background-color: #EFF3FE;
+    box-shadow: 0 0px 30px rgba(0, 103, 255, 0.25);
+
+
+    &>h2 {
+        font-family: var(--title-font);
+        font-size: 36px;
+    }
+
+    &>.hobbiesContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10%;
+        margin-top: 10vh;
+
+        &>.rugby,
+        .chess {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            background-color: white;
+            padding: 30px;
+            border-top: 10px solid #7A95F6;
+            box-shadow: 0 0px 30px rgba(0, 103, 255, 0.25);
+
+            &>h3 {
+                font-family: var(--title-font);
+                font-size: 26px;
+                margin-bottom: 30px;
+            }
+
+            &>p {
+                font-family: var(--description-font);
+                font-size: 18px;
+                width: 80%;
+                border-left: 1px solid #000000;
+                padding-left: 10px;
+            }
+
+            &>img {
+                margin-top: 30px;
+            }
+        }
+
+    }
+}
+
+.Resume {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 244, 244);
+    font-family: var(--description-font);
+
+    &>.resumeTitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 5px solid #ebebeb;
+        padding-bottom: 10px;
+
+        &>h1 {
+            font-size: 64px;
+            align-self: flex-start;
+            margin-bottom: 40px;
+        }
+
+        &>h3 {
+            font-size: 30px;
+            align-self: flex-end;
+        }
+    }
+
+    &>p {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    &>.profile {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        &>h2 {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        &>p {
+            font-size: 24px;
+        }
+    }
+
+    &>.experience {
+        display: flex;
+        flex-direction: column;
+
+        &>h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        &>.chaffeeZoo,
+        .bioShield,
+        .athletics {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+            &>h3 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            &>h4 {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+
+            &>ul {
+                list-style-position: inside;
+                margin-bottom: 10px;
+
+                &>li {
+                    font-size: 24px;
+                }
+
+            }
+
+            &>a {
+                font-size: 24px;
+                margin-bottom: 10px;
+                text-decoration: none;
+                color: black;
+                width: 110px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .languages {
+        margin-bottom: 10px;
+
+        &>h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        &>h4 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        &>ul {
+            list-style-position: inside;
+            margin-bottom: 10px;
+
+            &>li {
+                font-size: 24px;
+            }
+
+        }
+    }
+
+    .education {
+        margin-bottom: 30px;
+
+        &>h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        &>h4 {
+            font-size: 26px;
+            margin-bottom: 10px;
         }
     }
 }
