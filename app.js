@@ -41,6 +41,18 @@ const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
+const bubbleImg = new Image();
+bubbleImg.src = '/Images/Bubble.svg';
+
+const bubblePoppedImg = new Image();
+bubblePoppedImg.src = '/Images/BubblePopped.svg';
+
+const popSound = new Audio('/Images/pop.mp3');
+
+function playPop() {
+  popSound.currentTime = 0;
+  popSound.play();
+}
 
 // to generate a random number between two numbers
 function random(min, max) {
@@ -56,6 +68,10 @@ function Bubble(x, y, velX, velY, color, size) {
   this.velY = velY;
   this.color = color;
   this.size = size;
+  this.popped = false;
+  this.popTime = null;
+  this.popDuration = 1000;
+  this.alive = true;
 }
 
 Bubble.prototype.draw = function() {
@@ -84,20 +100,6 @@ Bubble.prototype.update = function() {
 
   this.x += this.velX;
   this.y += this.velY;
-}
-
-Bubble.prototype.collisionDetect = function() {
-  for (let j = 0; j < Bubbles.length; j++) {
-    if (!(this === Bubbles[j])) {
-      const dx = this.x - Bubbles[j].x;
-      const dy = this.y - Bubbles[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < this.size + Bubbles[j].size) {
-        Bubbles[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
-      }
-    }
-  }
 }
 
 let Bubbles = [];
