@@ -49,30 +49,30 @@
 
     <section class="contactInfo">
 
-        <section class="contactInput">
+        <form action="sendmail.php" method="POST" class="contactInput">
 
             <section class="EmailAndName">
 
-                <section class="InputEmail">
+                <section class="InputEmail" id="email" name="email" required>
                     <h3>Email</h3>
                     <input type="email">
                 </section>
 
                 <section class="InputName">
                     <h3>Name</h3>
-                    <input type="text">
+                    <input type="text" id="name" name="name" required>
                 </section>
 
             </section>
 
             <section class="InputMessage">
                 <h3>Message</h3>
-                <textarea></textarea>
+                <textarea id="message" name="message" required></textarea>
             </section>
 
-            <p class="submit">Submit</p>
+            <button type="submit" class="submit">Submit</button>
 
-        </section>
+        </form>
 
         <section class="contactDetails">
 
@@ -90,14 +90,14 @@
 
             <section class="contactInstagram">
                 <img src="/Images/Instagram-blue.png" alt="Instagram Icon">
-                <h3>Instagram</h3>
-                <p><a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
+                <h3>Github</h3>
+                <p><a href="https://github.com/bruhi123" target="_blank">Link here</a></p>
             </section>
 
             <section class="contactLinkedIn">
                 <img src="/Images/LinkedIn-blue.png" alt="LinkedIn Icon">
                 <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
+                <p><a href="https://www.linkedin.com/" target="_blank">Link here</a></p>
             </section>
 
         </section>

@@ -887,6 +887,7 @@ body {
             outline: none;
             transition: border-color 0.2s;
             width: 100%;
+            font-family: var(--description-font);
         }
 
         & textarea {
@@ -895,11 +896,11 @@ body {
             background: transparent;
             padding: 8px 0;
             font-size: 14px;
-            color: var(--text-dark);
             outline: none;
             resize: none;
             height: 80px;
             width: 100%;
+            font-family: var(--description-font);
             transition: border-color 0.2s;
         }
 
@@ -914,6 +915,8 @@ body {
             cursor: pointer;
             user-select: none;
             width: 100%;
+            border: none;
+            
 
             &:hover {
                 transform: translateY(-1px);

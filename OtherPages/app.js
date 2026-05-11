@@ -145,7 +145,7 @@ function spawnBubble() {
 
 let bubbles = [];
 
-while (bubbles.length < 15) {
+while (bubbles.length < 5) {
   bubbles.push(spawnBubble());
 }
 
@@ -195,3 +195,5 @@ if (bubbleImg.complete) {
     loop();
   });
 }
+
+
