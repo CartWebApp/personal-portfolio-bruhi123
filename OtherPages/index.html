@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
-    <canvas style="position:fixed; top:0; left:0; z-index:0; pointer-events:auto;"></canvas>
+<body id="Index-body">
+
+    <img class="bubble" src="/Images/Bubble.svg" hidden draggable="false">
+    <img class="bubblePopped" src="/Images/BubblePopped.svg" hidden draggable="false">
+    <canvas></canvas>
 
     <!-- Navigation Bar -->
     <img src="/Images/Gradient-Homepage.png" alt="Background Image" class="backgroundImage">
     <nav class="navBar">
-        <a class="profile" href="../index.html">B.H.</a>
+        <a class="profile" href="../OtherPages/index.html">B.H.</a>
         <section class="navLinks">
             <h2 class="visually-hidden">Navigation</h2>
-            <a class="home" href="../index.html">Home</a>
+            <a class="home" href="../OtherPages/index.html">Home</a>
             <a class="about" href="../OtherPages/AboutMe.html">About</a>
 
             <div class="projectsWrapper" id="projectsNav">
@@ -95,7 +98,7 @@
             <p>My partner and I are developing a horror game, set in an asylum. Focusing on creating an interactive
                 experience for the user. Through this project, we are going to build our skills in HTML, CSS, and
                 JavaScript</p>
-            <a href="https://placeholderfornow">Link here</a>
+            <a href="https://thegurneyjourney.netlify.app/">Link here</a>
         </section>
 
         <img src="/Images/Gurney-journey.png" alt="Project 3 Image">
@@ -103,7 +106,7 @@
     </section>
 
     <!-- Reach Out Section -->
-    <section class="reachOut">
+    <section class="reachOut fade-in">
 
         <h2>Feel free to reach out!</h2>
         <p>I'd love to hear from you</p>
@@ -125,7 +128,7 @@
                 <h3 class="visually-hidden">Footer Menu</h3>
 
                 <div>
-                    <a class="homeFooter" href="../index.html">Home</a>
+                    <a class="homeFooter" href="../OtherPages/index.html">Home</a>
                     <a class="aboutFooter" href="../OtherPages/AboutMe.html">About</a>
                 </div>
 

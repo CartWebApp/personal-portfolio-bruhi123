@@ -19,31 +19,30 @@
 .projectsWrapper {
     display: flex;
     align-items: center;
-    position: static;
-    padding-bottom: 28px;
-    margin-bottom: -28px;
 }
 
 .projectsDialog {
-    position: absolute;
+    position: fixed;
     background: #7A95F6;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 10px;
     opacity: 0;
-    top: 19vh;
-    left: 7vw;
+    top: clamp(70px, 10vw, 140px);
+    left: clamp(16px, 4vw, 60px);
+    right: clamp(16px, 4vw, 50px);
     transform: scaleY(0);
     transform-origin: top center;
     pointer-events: none;
     transition: opacity 0.5s ease;
+    height: auto;
     width: 85vw;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     padding: 30px 40px;
+    z-index: 6;
 
     &>a {
         text-decoration: none;
@@ -54,7 +53,6 @@
     }
 }
 
-.projectsWrapper:hover .projectsDialog,
 .projectsWrapper.open .projectsDialog {
     opacity: 1;
     pointer-events: auto;
@@ -86,18 +84,18 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 50px;
+    margin: clamp(16px, 4vw, 50px);
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     box-shadow: inset 0 0px 30px rgba(0, 103, 255, 0.4);
 
     &>.profile {
-        font-size: 24px;
+        font-size: clamp(16px, 3vw, 24px);
         font-weight: bold;
         text-decoration: none;
-        width: 70px;
-        height: 70px;
+        width: clamp(44px, 8vw, 70px);
+        height: clamp(44px, 8vw, 70px);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -109,7 +107,7 @@ body {
         display: flex;
         flex-direction: row;
         gap: 3vw;
-        font-size: 20px;
+        font-size: clamp(13px, 2vw, 20px);
         padding-right: 4%;
 
         &>a {
@@ -120,6 +118,8 @@ body {
                 animation: scaleUp 0.3s ease forwards;
             }
         }
+
+
     }
 }
 
@@ -132,20 +132,20 @@ body {
     margin-top: 10vh;
 
     &>h1 {
-        font-size: 96px;
+        font-size: clamp(36px, 8vw, 96px);
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         text-align: center;
     }
 
     &>h2 {
-        font-size: 40px;
+        font-size: clamp(20px, 4vw, 40px);
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     &>.major {
-        font-size: 40px;
+        font-size: clamp(20px, 4vw, 40px);
         color: #6886f6;
         font-weight: 500;
         text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
@@ -164,7 +164,7 @@ body {
 
     &>h3 {
         font-family: var(--title-font);
-        font-size: 30px;
+        font-size: clamp(18px, 3vw, 30px);
         margin-top: 60px;
         color: #7A95F6;
     }
@@ -206,7 +206,7 @@ body {
 
     &>h2 {
         font-family: var(--title-font);
-        font-size: 36px;
+        font-size: clamp(22px, 4vw, 36px);
     }
 
     &>.projectsSection {
@@ -232,7 +232,7 @@ body {
 
             &>h3 {
                 font-family: var(--title-font);
-                font-size: 24px;
+                font-size: clamp(16px, 2.5vw, 24px);
                 margin-bottom: 20px;
                 border-left: 1px solid #000000;
                 padding-left: 10px;
@@ -241,14 +241,14 @@ body {
 
             &>p {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 border-left: 1px solid #000000;
                 padding-left: 10px;
             }
 
             &>a {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 border-left: 1px solid #000000;
                 padding-left: 10px;
                 margin-top: 20px;
@@ -289,19 +289,19 @@ body {
 
         &>h2 {
             font-family: var(--title-font);
-            font-size: 36px;
+            font-size: clamp(22px, 4vw, 36px);
             margin-bottom: 60px;
         }
 
         &>h3 {
             font-family: var(--title-font);
-            font-size: 24px;
+            font-size: clamp(16px, 2.5vw, 24px);
             margin-bottom: 30px;
         }
 
         &>p {
             font-family: var(--description-font);
-            font-size: 16px;
+            font-size: clamp(13px, 1.8vw, 16px);
             width: 50%;
             border-left: 1px solid #000000;
             padding-left: 10px;
@@ -309,7 +309,7 @@ body {
 
         &>a {
             font-family: var(--description-font);
-            font-size: 16px;
+            font-size: clamp(13px, 1.8vw, 16px);
             border-left: 1px solid #000000;
             padding-left: 10px;
             margin-top: 20px;
@@ -339,20 +339,20 @@ body {
 
     &>h2 {
         font-family: var(--title-font);
-        font-size: 36px;
+        font-size: clamp(22px, 4vw, 36px);
         margin-bottom: 20px;
         font-weight: 500;
     }
 
     &>p {
         font-family: var(--description-font);
-        font-size: 16px;
+        font-size: clamp(13px, 1.8vw, 16px);
         margin-bottom: 30px;
     }
 
     &>a {
         font-family: var(--description-font);
-        font-size: 20px;
+        font-size: clamp(16px, 2.5vw, 20px);
         background-color: #7A95F6;
         color: white;
         border-radius: 20px;
@@ -383,7 +383,7 @@ body {
         justify-content: space-between;
 
         &>h2 {
-            font-size: 36px;
+            font-size: clamp(22px, 4vw, 36px);
         }
     }
 
@@ -394,7 +394,7 @@ body {
         align-items: center;
 
         &>h3 {
-            font-size: 24px;
+            font-size: clamp(18px, 2.5vw, 24px);
             margin-bottom: 30px;
         }
 
@@ -439,12 +439,12 @@ body {
         align-items: center;
 
         &>h3 {
-            font-size: 24px;
+            font-size: clamp(18px, 2.5vw, 24px);
             margin-bottom: 30px;
         }
 
         &>p {
-            font-size: 16px;
+            font-size: clamp(13px, 1.8vw, 16px);
             margin-bottom: 20px;
         }
 
@@ -475,7 +475,7 @@ body {
 
     &>h1 {
         font-family: var(--title-font);
-        font-size: 64px;
+        font-size: clamp(32px, 6vw, 64px);
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         text-align: center;
@@ -502,12 +502,12 @@ body {
 
         &>h2 {
             font-family: var(--title-font);
-            font-size: 36px;
+            font-size: clamp(22px, 3.5vw, 36px);
         }
 
         &>p {
             font-family: var(--description-font);
-            font-size: 20px;
+            font-size: clamp(15px, 2vw, 20px);
             border-left: 1px solid black;
             padding-left: 10px;
         }
@@ -523,7 +523,7 @@ body {
 
     &>h2 {
         font-family: var(--title-font);
-        font-size: 36px;
+        font-size: clamp(22px, 3.5vw, 36px);
         align-self: center;
     }
 
@@ -580,7 +580,7 @@ body {
 
     &>h2 {
         font-family: var(--title-font);
-        font-size: 36px;
+        font-size: clamp(22px, 3.5vw, 36px);
     }
 
     &>.hobbiesContent {
@@ -607,13 +607,13 @@ body {
 
             &>h3 {
                 font-family: var(--title-font);
-                font-size: 26px;
+                font-size: clamp(18px, 2.5vw, 26px);
                 margin-bottom: 30px;
             }
 
             &>p {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 width: 80%;
                 border-left: 1px solid #000000;
                 padding-left: 10px;
@@ -642,13 +642,13 @@ body {
         padding-bottom: 10px;
 
         &>h1 {
-            font-size: 64px;
+            font-size: clamp(32px, 6vw, 64px);
             align-self: flex-start;
             margin-bottom: 40px;
         }
 
         &>h3 {
-            font-size: 30px;
+            font-size: clamp(18px, 3vw, 30px);
             align-self: flex-end;
         }
     }
@@ -657,7 +657,7 @@ body {
         display: flex;
         align-self: flex-end;
         margin-top: 10px;
-        font-size: 18px;
+        font-size: clamp(14px, 2vw, 18px);
     }
 
     &>.profile {
@@ -666,12 +666,12 @@ body {
         margin-bottom: 20px;
 
         &>h2 {
-            font-size: 40px;
+            font-size: clamp(24px, 4vw, 40px);
             margin-bottom: 5px;
         }
 
         &>p {
-            font-size: 24px;
+            font-size: clamp(16px, 2.5vw, 24px);
         }
     }
 
@@ -680,7 +680,7 @@ body {
         flex-direction: column;
 
         &>h2 {
-            font-size: 40px;
+            font-size: clamp(24px, 4vw, 40px);
             margin-bottom: 30px;
         }
 
@@ -692,12 +692,12 @@ body {
             margin-bottom: 10px;
 
             &>h3 {
-                font-size: 28px;
+                font-size: clamp(18px, 2.8vw, 28px);
                 margin-bottom: 10px;
             }
 
             &>h4 {
-                font-size: 26px;
+                font-size: clamp(16px, 2.5vw, 26px);
                 margin-bottom: 10px;
             }
 
@@ -706,13 +706,13 @@ body {
                 margin-bottom: 10px;
 
                 &>li {
-                    font-size: 24px;
+                    font-size: clamp(14px, 2.5vw, 24px);
                 }
 
             }
 
             &>a {
-                font-size: 24px;
+                font-size: clamp(14px, 2.5vw, 24px);
                 margin-bottom: 10px;
                 text-decoration: none;
                 color: black;
@@ -729,12 +729,12 @@ body {
         margin-bottom: 10px;
 
         &>h2 {
-            font-size: 40px;
+            font-size: clamp(24px, 4vw, 40px);
             margin-bottom: 20px;
         }
 
         &>h4 {
-            font-size: 26px;
+            font-size: clamp(16px, 2.5vw, 26px);
             margin-bottom: 10px;
         }
 
@@ -743,7 +743,7 @@ body {
             margin-bottom: 10px;
 
             &>li {
-                font-size: 24px;
+                font-size: clamp(14px, 2.5vw, 24px);
             }
 
         }
@@ -753,7 +753,7 @@ body {
         margin-bottom: 30px;
 
         &>h2 {
-            font-size: 40px;
+            font-size: clamp(24px, 4vw, 40px);
             margin-bottom: 20px;
         }
 
@@ -767,12 +767,12 @@ body {
 
 
                 &>h3 {
-                    font-size: 26px;
+                    font-size: clamp(16px, 2.5vw, 26px);
                     margin-bottom: 10px;
                 }
 
                 &>p {
-                    font-size: 20px;
+                    font-size: clamp(14px, 2vw, 20px);
                     margin-bottom: 10px;
                 }
 
@@ -781,7 +781,7 @@ body {
                     margin-bottom: 10px;
 
                     &>li {
-                        font-size: 24px;
+                        font-size: clamp(14px, 2.5vw, 24px);
                     }
 
                 }
@@ -793,7 +793,7 @@ body {
         margin-bottom: 20px;
 
         &>h2 {
-            font-size: 40px;
+            font-size: clamp(24px, 4vw, 40px);
             margin-bottom: 20px;
         }
 
@@ -805,7 +805,7 @@ body {
             flex-wrap: wrap;
 
             &>li {
-                font-size: 24px;
+                font-size: clamp(14px, 2.5vw, 24px);
                 margin-right: 5%;
                 margin-bottom: 20px;
             }
@@ -817,7 +817,7 @@ body {
 .resumeContent {
     display: flex;
     flex-direction: row;
-    font-size: 30px;
+    font-size: clamp(18px, 3vw, 30px);
     margin-top: 10vh;
     padding-left: 50px;
 
@@ -1002,7 +1002,7 @@ body {
 
         &>h2 {
             font-family: var(--title-font);
-            font-size: 30px;
+            font-size: clamp(18px, 2.8vw, 30px);
             text-align: center;
         }
 
@@ -1014,7 +1014,7 @@ body {
 
             &>li {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 margin-bottom: 5px;
             }
         }
@@ -1033,7 +1033,7 @@ body {
 
     &>h2 {
         font-family: var(--title-font);
-        font-size: 30px;
+        font-size: clamp(18px, 2.8vw, 30px);
     }
 
     &>ul {
@@ -1045,7 +1045,7 @@ body {
 
         &>li {
             font-family: var(--description-font);
-            font-size: 18px;
+            font-size: clamp(14px, 2vw, 18px);
             margin-bottom: 5px;
         }
     }
@@ -1068,7 +1068,7 @@ body {
 
         &>h2 {
             font-family: var(--title-font);
-            font-size: 30px;
+            font-size: clamp(18px, 2.8vw, 30px);
         }
 
         &>ul {
@@ -1080,7 +1080,7 @@ body {
 
             &>li {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 margin-bottom: 5px;
             }
         }
@@ -1127,7 +1127,7 @@ body {
 
         &>h2 {
             font-family: var(--title-font);
-            font-size: 30px;
+            font-size: clamp(18px, 2.8vw, 30px);
         }
 
         &>ul {
@@ -1138,7 +1138,7 @@ body {
 
             &>li {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 margin-bottom: 5px;
             }
         }
@@ -1211,7 +1211,7 @@ body {
 
         &>h2 {
             font-family: var(--title-font);
-            font-size: 30px;
+            font-size: clamp(18px, 2.8vw, 30px);
         }
 
         &>ul {
@@ -1222,7 +1222,7 @@ body {
 
             &>li {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 margin-bottom: 5px;
             }
         }
@@ -1249,7 +1249,7 @@ body {
 
         &>h2 {
             font-family: var(--title-font);
-            font-size: 30px;
+            font-size: clamp(18px, 2.8vw, 30px);
         }
 
         &>ul {
@@ -1260,7 +1260,7 @@ body {
 
             &>li {
                 font-family: var(--description-font);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 margin-bottom: 5px;
             }
         }
@@ -1305,18 +1305,33 @@ body {
 
     &>h2 {
         font-family: var(--title-font);
-        font-size: 30px;
+        font-size: clamp(18px, 2.8vw, 30px);
     }
 
     &>p {
         font-family: var(--description-font);
-        font-size: 18px;
+        font-size: clamp(14px, 2vw, 18px);
         margin-top: 10px;
     }
 
     &>img {
         width: 20vw;
     }
+}
+
+canvas {
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#bubble,
+#bubblePopped {
+    display: none;
 }
 
 @keyframes scaleUp {
@@ -1330,34 +1345,382 @@ body {
 }
 
 @keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes blurReveal {
-  0% {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+#intro-text {
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    animation: blurReveal 1s ease forwards;
+
+    &>h1 {
+        font-family: var(--title-font);
+        font-size: clamp(36px, 8vw, 64px);
+        color: #111;
+        letter-spacing: -2px;
+    }
+
+    &>p {
+        font-family: var(--description-font);
+        font-size: clamp(14px, 2vw, 18px);
+        color: #999;
+        margin-top: 16px;
+    }
+}
+
+
+#counter {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: clamp(12px, 1.5vw, 15px);
+    color: #7A95F6;
+    margin-top: 20px;
+}
+
+#intro-overlay {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 5;
+    pointer-events: none;
     opacity: 0;
-    filter: blur(10px);
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-  }
+    transition: opacity 0.8s ease;
+}
+
+@keyframes blur {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translate(-50%, calc(-50% + 20px));
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* SCROLL ANIMATION NOT FINISHED, CONNECT THEM WITH PAGES*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 20%;
+}
+
+@media (max-width: 650px) {
+    .navBar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        &>.navLinks {
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-right: 0;
+            justify-content: center;
+        }
+    }
+
+    .projectsDialog {
+        top: auto;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .titlesHome {
+        margin-top: 6vh;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .learnMore {
+        margin-top: 20vh;
+
+        &>.learnMoreLinks {
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+    }
+
+    .highlightedProjects {
+
+        &>.projectsSection {
+            flex-direction: column;
+            align-items: center;
+            width: 90vw;
+            padding: 30px 20px;
+            gap: 40px;
+
+            &>.project1,
+            &>.project2 {
+                width: 100%;
+            }
+        }
+    }
+
+    .currentlyProject {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 6vw;
+
+        &>.currentlyProjectText>p {
+            width: 100%;
+        }
+
+        &>img {
+            width: 85%;
+        }
+    }
+
+    .reachOut {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 40px;
+        padding: 40px 20px;
+        text-align: center;
+
+        &>.collaborationFooter>section {
+            justify-content: center;
+        }
+    }
+
+    .fiveYearPlan {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+        margin-top: 10vh;
+
+        &>img {
+            width: 90%;
+        }
+
+        &>section {
+            width: 90%;
+            align-self: auto;
+        }
+    }
+
+    .cartJourney {
+        margin: 10vh 6vw 0;
+
+        &>.cartJourneyContentUp,
+        &>.cartJourneyContentDown {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            &>p {
+                width: 100%;
+            }
+
+            &>img {
+                width: 85%;
+                height: auto;
+            }
+        }
+    }
+
+    .hobbies {
+
+        &>.hobbiesContent {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            &>.rugby,
+            &>.chess {
+                width: 80%;
+            }
+        }
+    }
+
+    .contactInfo {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+
+        &>.contactDetails {
+            max-width: 100%;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .technologyStack-PG {
+        margin-top: 10vh;
+
+        &>.techTurkeyImages {
+            flex-direction: column;
+            align-items: center;
+
+            &>img {
+                width: 80vw;
+            }
+        }
+
+        &>img {
+            width: 88vw;
+        }
+    }
+
+    .conceptLearned-PG {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+
+        &>.left {
+            width: 90%;
+        }
+
+        &>.right,
+        &>.FresnoConceptImage,
+        &>.right-Turkey {
+            width: 90%;
+            justify-content: center;
+
+            &>img {
+                width: 85vw;
+            }
+        }
+    }
+
+    .challengesSolutions-PG {
+
+        &>section {
+            width: 90vw;
+            padding: 30px 20px;
+        }
+    }
+
+    .habits-mind-PG {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+
+        &>.right {
+            width: 90%;
+        }
+
+        &>.left,
+        &>.left-Turkey-Zoo {
+            width: 80%;
+            justify-content: center;
+
+            &>img {
+                width: 70%;
+                height: auto;
+            }
+        }
+    }
+
+    .QRCode-PG {
+
+        &>img {
+            width: 55vw;
+        }
+    }
+
+    .ConceptsLearned-HabitMind-essay {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0 20px;
+
+        &>section {
+            width: 85%;
+        }
+    }
+
+    .challengesSolutions-essay {
+
+        &>ul {
+            width: 80vw;
+        }
+    }
+
+    .Resume {
+
+        &>.resumeTitle {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &>.education>section {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &>.skills>ul {
+            flex-direction: column;
+        }
+    }
 }
