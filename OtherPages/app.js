@@ -137,8 +137,8 @@ function spawnBubble() {
   return new Bubble(
     random(size, width - size),
     random(size, height - size),
-    random(-3, 3) || 1,
-    random(-3, 3) || 1,
+    random(-2, 2) || 1,
+    random(-2, 2) || 1,
     size
   );
 }
