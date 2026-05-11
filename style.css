@@ -916,7 +916,7 @@ body {
             user-select: none;
             width: 100%;
             border: none;
-            
+
 
             &:hover {
                 transform: translateY(-1px);
@@ -1446,22 +1446,24 @@ canvas {
 
 /* SCROLL ANIMATION NOT FINISHED, CONNECT THEM WITH PAGES*/
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(100px);
+        transform: scale(0.7);
     }
 
-    to {
+    100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0px);
+        transform: scale(1);
     }
 }
 
 .fade-in {
     opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
+    animation: fadeInUp 0.3s ease forwards;
     animation-timeline: view();
-    animation-range: entry 0% entry 20%;
+    animation: scroll();
 }
 
 @media (max-width: 650px) {

@@ -1,6 +1,4 @@
 // THINGS TO FINISH FOR LATER!!!!!!!!
-// Change the instagram box for a guthub box
-// do the scroll animation!!! is not conected
 // fix the overlay mobile and desktop version, they are not in right position
 // see if media queries and buttons are not glitched
 // that's all I think, then just test it out and download it on netlify
@@ -62,7 +60,8 @@ if (footerProjectsLink) {
     e.preventDefault();
     if (navProjects) {
       openProjectsDropdown();
-    }});
+    }
+  });
 }
 
 // bubble move
@@ -197,3 +196,31 @@ if (bubbleImg.complete) {
 }
 
 
+// CONTACT EMAIL
+
+const form = document.querySelector('.contactInput');
+const button = document.getElementById('.submit');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  button.disabled = true;
+  button.textContent = 'Sending...';
+
+  const data = new FormData(form);
+
+  fetch('YOUR_WEB_APP_URL', {
+    method: 'POST',
+    body: data
+  })
+    .then(res => res.text())
+    .then(response => {
+      button.textContent = 'Sent';
+      button.classList.add('sent');
+      form.reset();
+    })
+    .catch(error => {
+      alert('Error: ' + error.message);
+      button.disabled = false;
+      button.textContent = 'Send';
+    });
+});
