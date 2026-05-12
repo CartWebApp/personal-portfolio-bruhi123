@@ -107,7 +107,7 @@ window.addEventListener('click', function (e) {
                 setTimeout(() => {
                     overlay.style.opacity = '1';
                     setTimeout(() => {
-                        window.location.href = 'OtherPages/index.html';
+                        window.location.href = 'OtherPages/Home.html';
                     }, 800);
                 }, 400);
             } else {
