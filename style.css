@@ -520,6 +520,11 @@ body {
             padding-left: 10px;
         }
     }
+
+    &>img {
+        width: 600px;
+        border-radius: 20px;
+    }
 }
 
 .cartJourney {
@@ -630,6 +635,7 @@ body {
             &>img {
                 margin-top: 30px;
                 width: 250px;
+                border-radius: 20px;
             }
         }
 
