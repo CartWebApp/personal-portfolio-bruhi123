@@ -100,6 +100,7 @@ body {
         align-items: center;
         justify-content: center;
         background-color: rgb(255, 255, 255, 0.7);
+        user-select: none;
     }
 
     &>.navLinks {
@@ -112,6 +113,19 @@ body {
         &>a {
             text-decoration: none;
             color: black;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                animation: scaleUp 0.3s ease forwards;
+            }
+        }
+
+        &>div>a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            user-select: none;
 
             &:hover {
                 animation: scaleUp 0.3s ease forwards;
@@ -129,6 +143,7 @@ body {
     align-items: center;
     gap: 20px;
     margin-top: 10vh;
+    user-select: none;
 
     &>h1 {
         font-size: clamp(36px, 8vw, 96px);
@@ -472,6 +487,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-top: 10vh;
+    user-select: none;
 
     &>h1 {
         font-family: var(--title-font);
@@ -1388,7 +1404,7 @@ body {
 }
 
 canvas {
-    z-index: 2;
+    z-index: 7;
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -1610,6 +1626,7 @@ canvas {
         margin-top: 6vh;
         padding: 0 20px;
         text-align: center;
+        user-select: none;
     }
 
     .learnMore {
