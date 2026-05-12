@@ -1,8 +1,3 @@
-// THINGS TO FINISH FOR LATER!!!!!!!!
-// fix the overlay mobile and desktop version, they are not in right position
-// see if media queries and buttons are not glitched
-// that's all I think, then just test it out and download it on netlify
-
 const buttonProjectsHome = document.querySelector(".projectsLearnMore");
 const footerProjectsLink = document.querySelector(".projectsFooter");
 const navProjects = document.querySelector(".projectsWrapper");
@@ -72,6 +67,11 @@ const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
+window.addEventListener('resize', () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
+
 const bubbleImg = document.querySelector('.bubble');
 const bubblePoppedImg = document.querySelector('.bubblePopped');
 
@@ -132,7 +132,7 @@ Bubble.prototype.update = function () {
 }
 
 function spawnBubble() {
-  const size = random(20, 40);
+  const size = random(25, 45);
   return new Bubble(
     random(size, width - size),
     random(size, height - size),
@@ -197,30 +197,33 @@ if (bubbleImg.complete) {
 
 
 // CONTACT EMAIL
+emailjs.init("demWgnGiMJKq9Dogq");
 
 const form = document.querySelector('.contactInput');
-const button = document.getElementById('.submit');
+const button = document.querySelector('.submit');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   button.disabled = true;
   button.textContent = 'Sending...';
 
-  const data = new FormData(form);
-
-  fetch('YOUR_WEB_APP_URL', {
-    method: 'POST',
-    body: data
-  })
-    .then(res => res.text())
-    .then(response => {
+  emailjs.sendForm("service_y95qmu7", "template_j1ec97o", form)
+    .then(() => {
       button.textContent = 'Sent';
       button.classList.add('sent');
       form.reset();
+
+      const popup = document.getElementById('successPopup');
+      popup.classList.add('active');
+
+      document.getElementById('successPopupClose').addEventListener('click', () => {
+        popup.classList.remove('active');
+      });
+
+      setTimeout(() => {
+        button.disabled = false;
+        button.textContent = 'Submit';
+        button.classList.remove('sent');
+      }, 3000);
     })
-    .catch(error => {
-      alert('Error: ' + error.message);
-      button.disabled = false;
-      button.textContent = 'Send';
-    });
 });
