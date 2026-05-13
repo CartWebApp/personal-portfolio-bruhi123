@@ -1,11 +1,13 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight;
 
-const width = canvas.width;
-const height = canvas.height;
+window.addEventListener('resize', () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
 
 const bubbleImg = document.querySelector('.bubble');
 const bubblePoppedImg = document.querySelector('.bubblePopped');
@@ -105,7 +107,7 @@ window.addEventListener('click', function (e) {
                 setTimeout(() => {
                     overlay.style.opacity = '1';
                     setTimeout(() => {
-                        window.location.href = 'OtherPages/index.html';
+                        window.location.href = 'OtherPages/Home.html';
                     }, 800);
                 }, 400);
             } else {

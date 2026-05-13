@@ -17,10 +17,10 @@
     <img src="/Images/Gradient-Homepage.png" alt="Background Image" class="backgroundImage">
     <!-- Navigation Bar -->
     <nav class="navBar">
-        <a class="profile" href="../OtherPages/index.html">B.H.</a>
+        <a class="profile" href="../OtherPages/Home.html">B.H.</a>
         <section class="navLinks">
             <h2 class="visually-hidden">Navigation</h2>
-            <a class="home" href="../OtherPages/index.html">Home</a>
+            <a class="home" href="../OtherPages/Home.html">Home</a>
             <a class="about" href="../OtherPages/AboutMe.html">About</a>
 
             <div class="projectsWrapper">
@@ -46,6 +46,7 @@
 
     <header class="titlesContact">
         <h1>Contact Me</h1>
+        <h3>Thank you for visiting my portfolio! Reach out anytime! 😁</h3>
     </header>
 
     <section class="contactInfo fade-in">
@@ -98,13 +99,20 @@
             <section class="contactLinkedIn">
                 <img src="/Images/LinkedIn-blue.png" alt="LinkedIn Icon">
                 <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/" target="_blank">Link here</a></p>
+                <p><a href="https://www.linkedin.com/in/bruno-hidalgo001/" target="_blank">Link here</a></p>
             </section>
 
         </section>
 
     </section>
 
+    <div class="successPopup" id="successPopup">
+        <div class="successPopupInner">
+            <h2>Message Sent!</h2>
+            <p>Thanks for reaching out, I would love to hear again from you.</p>
+            <button class="successPopupClose" id="successPopupClose">Close</button>
+        </div>
+    </div>
 
     <!-- Footer for all pages -->
     <footer class="footer">
@@ -120,7 +128,7 @@
                 <h3 class="visually-hidden">Footer Menu</h3>
 
                 <div>
-                    <a class="homeFooter" href="../OtherPages/index.html">Home</a>
+                    <a class="homeFooter" href="../OtherPages/Home.html">Home</a>
                     <a class="aboutFooter" href="../OtherPages/AboutMe.html">About</a>
                 </div>
 
@@ -140,12 +148,13 @@
             <section>
                 <h4 class="visually-hidden">Footer Column</h4>
                 <a href="https://github.com/bruhi123" target="_blank">Github</a>
-                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/bruno-hidalgo001/" target="_blank">LinkedIn</a>
             </section>
         </section>
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="app.js"></script>
 </body>
 
