@@ -59,7 +59,7 @@ Bubble.prototype.update = function () {
 };
 
 function spawnBubble() {
-    const size = random(30, 50);
+    const size = random(40, 60);
     return new Bubble(
         random(size, width - size),
         random(size, height - size),
